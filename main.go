@@ -1,4 +1,4 @@
-//go:build linux || windows
+//go:build linux || windows || darwin
 
 // https://go.googlesource.com/proposal/+/master/design/draft-gobuild.md
 // $ go mod init oddstream.games/gosol
@@ -10,14 +10,13 @@ package main
 
 import (
 	"flag"
+	_ "image/png" // load png decoder in main package
 	"log"
 	"os"
 
-	// load png decoder in main package
-	_ "image/png"
-
 	"github.com/hajimehoshi/ebiten/v2"
-	sol "oddstream.games/gosol/sol"
+
+	"oddstream.games/gosol/sol"
 	"oddstream.games/gosol/util"
 )
 

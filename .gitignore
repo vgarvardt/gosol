@@ -6,3 +6,6 @@ todo.txt
 notes.txt
 changes.txt
 fore-aft.txt
+vendor/
+gosol.iml
+.idea/

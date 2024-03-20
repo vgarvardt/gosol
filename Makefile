@@ -12,6 +12,9 @@ wasm: Makefile
 linux: Makefile
 	go build -v -o $(TARGET) -ldflags="-s -w"
 
+darwin: Makefile
+	go build -v -o $(TARGET) -ldflags="-s -w"
+
 windows: Makefile
 	GOOS=windows GOARCH=amd64 go build -v -o $(TARGET).exe -ldflags="-s -w"
 
